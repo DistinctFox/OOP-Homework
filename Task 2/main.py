@@ -28,7 +28,7 @@ def get_shop_list_by_dishes(dishes, person_count):
         for ingredient in cook_book.get(dish):
             shop_list[ingredient.get('ingredient_name')] = {
                 'measure': ingredient.get('measure'),
-                'quantity': ingredient.get('quantity') * person_count
+                'quantity': int(ingredient.get('quantity')) * person_count
             }
     pprint(shop_list, sort_dicts=False)
 
